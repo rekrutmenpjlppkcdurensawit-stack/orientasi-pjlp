@@ -63,6 +63,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex">
+      {/* Sidebar */}
       <div className="w-64 bg-slate-900 border-r border-slate-800 p-6 space-y-6">
         <div className="mb-8">
           <h1 className="text-xl font-bold text-indigo-400">Onboard DUWIT</h1>
@@ -75,6 +76,7 @@ export default function AdminDashboard() {
         </nav>
       </div>
 
+      {/* Main Content */}
       <div className="flex-1 p-8">
         {activeTab === 'monitoring' && (
           <div>
@@ -84,7 +86,7 @@ export default function AdminDashboard() {
                 <div key={s.id} className="bg-slate-900 border border-slate-800 rounded-xl p-5 flex items-center justify-between">
                   <div>
                     <h3 className="font-semibold text-lg">{s.title}</h3>
-                    <p className="text-sm text-slate-4 font-mono">Waktu: {new Date(s.date_time).toLocaleString('id-ID')}</p>
+                    <p className="text-sm text-slate-400 font-mono">Waktu: {new Date(s.date_time).toLocaleString('id-ID')}</p>
                     <span className="inline-block text-xs bg-slate-800 px-2.5 py-1 rounded-full text-indigo-300 mt-2">Klaster {s.klaster_id}</span>
                   </div>
                   <div>
